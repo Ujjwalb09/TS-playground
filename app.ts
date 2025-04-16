@@ -62,16 +62,86 @@
 
 // getData({ name: "ujjwal", email: "u@u", password: "123" });
 
-interface User {
-  name: string;
-  email: string;
-  password: string;
+// interface User {
+//   name: string;
+//   email: string;
+//   password: string;
+// }
+
+// interface Admin extends User {
+//   admin: boolean;
+// }
+
+// function abcd(obj: Admin) {}
+
+// abcd({ name: "ujjwal", email: "u@u", password: "123", admin: true });
+
+//TYPE alias
+// type a = number; //declared here as a number
+
+// let b: a; //used here to annotate other variable
+
+// type value = string | number | null;
+
+// let c: value;
+
+// // c = false; wont accept boolean
+
+// type arg = string | null; | is called union
+
+// function abcd(obj: arg) {} //params of this fn will only accept type arg
+
+//wont work in case of type. It wont merge both the types like interface
+// type abcd = string;
+// type abcd = string
+
+//type is for to create a type like string, number, null etc
+// interface is use to create the face/shape of an object
+
+// type User = {
+//   name: string;
+//   email: string;
+// };
+
+// //Admin is of type User union object
+// type Admin = User & {
+//   getDetails(user: string): void;
+// };
+
+// function abcd(a: Admin): void {
+//   a.name;
+//   a.email;
+//   a.getDetails;
+// }
+
+// function getDetails(user: string): void {}
+
+// abcd({ name: "ujjwal", email: "u@u", getDetails });
+
+//CLASSES and OBJECTS :-
+
+//creating a class device with fixed values
+class Device {
+  name = "lg";
+  price = 12000;
+  category = "digital";
 }
 
-interface Admin extends User {
-  admin: boolean;
+//creating object of class device
+let d1 = new Device();
+let d2 = new Device();
+
+//creating a class using constructor that accepts dynamic values
+class Device2 {
+  constructor(
+    public name: string,
+    public price: number,
+    public category: string
+  ) {}
 }
 
-function abcd(obj: Admin) {}
+//using constructor we can initialize instance variable with different values
 
-abcd({ name: "ujjwal", email: "u@u", password: "123", admin: true });
+//creating object of class device2
+let device1 = new Device2("Sony", 1000, "tv");
+let device2 = new Device2("apple", 20000, "accessories");
