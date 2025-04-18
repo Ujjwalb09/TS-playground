@@ -121,28 +121,83 @@
 //CLASSES and OBJECTS :-
 
 //creating a class device with fixed values
-class Device {
-  name = "lg";
-  price = 12000;
-  category = "digital";
-}
+// class Device {
+//   name = "lg";
+//   price = 12000;
+//   category = "digital";
+// }
 
-//creating object of class device
-let d1 = new Device();
-let d2 = new Device();
+// //creating object of class device
+// let d1 = new Device();
+// let d2 = new Device();
 
-//creating a class using constructor that accepts dynamic values
-class Device2 {
-  constructor(
-    public name: string,
-    public price: number,
-    public category: string = "electronics"
-  ) {}
-}
+// //creating a class using constructor that accepts dynamic values
+// class Device2 {
+//   constructor(
+//     public name: string,
+//     public price: number,
+//     public category: string = "electronics"
+//   ) {}
+// }
 
-//using constructor we can initialize instance variable with different values
+// //using constructor we can initialize instance variable with different values
 
-//creating object of class device2
-let device1 = new Device2("Sony", 1000, "tv");
-let device2 = new Device2("apple", 20000, "accessories");
-let device3 = new Device2("samsung", 1000);
+// //creating object of class device2
+// let device1 = new Device2("Sony", 1000, "tv");
+// let device2 = new Device2("apple", 20000, "accessories");
+// let device3 = new Device2("samsung", 1000);
+
+//Public, private, protected - access modifers
+//difference b/w public, private and protected
+
+// class BottleMaker {
+//   constructor(public name: string) {}
+
+//   changeName(newName: string) {
+//     this.name = newName;
+//   }
+// }
+
+// class MetalBottleMaker extends BottleMaker {
+//   constructor(name: string) {
+//     super(name);
+//   }
+
+//   getvalue() {
+//     console.log(this.name);
+//   }
+// }
+
+// let b1 = new MetalBottleMaker("Milton");
+// b1.getvalue();
+
+//if we make "name" private in bottle maker class we can change it through child class but cannot access it in child class. Private variables can only be accessed inside the same class
+
+// class BottleMaker {
+//   private name = "milton";
+// }
+
+// class MetalBottleMaker extends BottleMaker {
+//   public material = "metal";
+
+//   log() {
+//     console.log(this.name); //as name is private it is not accessible within child class
+//   }
+// }
+
+// let b1 = new MetalBottleMaker();
+
+// class BottleMaker {
+//   protected name = "milton";
+// }
+
+// class MetalBottleMaker extends BottleMaker {
+//   public material = "metal";
+
+//   logName() {
+//     console.log(this.name); //protected varibales can be accessed in child classes
+//   }
+// }
+
+// let b1 = new MetalBottleMaker();
+// b1.name; // since name property is protected we can only access it inside class and its sub clasess
