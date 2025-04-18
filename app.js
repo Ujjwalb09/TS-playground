@@ -95,7 +95,7 @@ let d1 = new Device();
 let d2 = new Device();
 //creating a class using constructor that accepts dynamic values
 class Device2 {
-    constructor(name, price, category) {
+    constructor(name, price, category = "electronics") {
         this.name = name;
         this.price = price;
         this.category = category;
@@ -105,3 +105,4 @@ class Device2 {
 //creating object of class device2
 let device1 = new Device2("Sony", 1000, "tv");
 let device2 = new Device2("apple", 20000, "accessories");
+let device3 = new Device2("samsung", 1000);

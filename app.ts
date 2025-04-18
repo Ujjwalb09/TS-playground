@@ -136,7 +136,7 @@ class Device2 {
   constructor(
     public name: string,
     public price: number,
-    public category: string
+    public category: string = "electronics"
   ) {}
 }
 
@@ -145,3 +145,4 @@ class Device2 {
 //creating object of class device2
 let device1 = new Device2("Sony", 1000, "tv");
 let device2 = new Device2("apple", 20000, "accessories");
+let device3 = new Device2("samsung", 1000);
