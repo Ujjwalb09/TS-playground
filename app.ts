@@ -201,3 +201,45 @@
 
 // let b1 = new MetalBottleMaker();
 // b1.name; // since name property is protected we can only access it inside class and its sub clasess
+
+//READ ONLY properties
+// class User {
+//   constructor(public readonly name: string) {}
+
+//   changeName() {
+//     this.name = "hello"; //as name is a readonly property we cannot change it
+//   }
+// }
+
+// let u1 = new User("Ujjwal");
+
+//OPTIONAL properties
+
+// class User {
+//   constructor(
+//     public name: string,
+//     public age: number,
+//     public gender?: string // this is an optional property now
+//   ) {}
+// }
+
+// let u1 = new User("Ujjwal", 26, "male");
+// let u2 = new User("Harsh", 25); //giving gender is not necessary
+
+//GETTERS and SETTERS
+class User {
+  constructor(public _name: string, public age: number) {}
+
+  //Getter
+  get name() {
+    return this._name;
+  }
+  //setter
+  set name(name: string) {
+    this._name = name;
+  }
+}
+
+let u1 = new User("Ujjwal", 26);
+u1.name; //calling getter function
+u1.name = "Ishu"; //calling setter function
