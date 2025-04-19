@@ -202,7 +202,7 @@
 // let b1 = new MetalBottleMaker();
 // b1.name; // since name property is protected we can only access it inside class and its sub clasess
 
-//READ ONLY properties
+//READ ONLY properties:-
 // class User {
 //   constructor(public readonly name: string) {}
 
@@ -213,7 +213,7 @@
 
 // let u1 = new User("Ujjwal");
 
-//OPTIONAL properties
+//OPTIONAL properties:-
 
 // class User {
 //   constructor(
@@ -226,20 +226,37 @@
 // let u1 = new User("Ujjwal", 26, "male");
 // let u2 = new User("Harsh", 25); //giving gender is not necessary
 
-//GETTERS and SETTERS
-class User {
-  constructor(public _name: string, public age: number) {}
+//GETTERS and SETTERS:-
+// class User {
+//   constructor(public _name: string, public age: number) {}
 
-  //Getter
-  get name() {
-    return this._name;
-  }
-  //setter
-  set name(name: string) {
-    this._name = name;
-  }
-}
+//   //Getter
+//   get name() {
+//     return this._name;
+//   }
+//   //setter
+//   set name(name: string) {
+//     this._name = name;
+//   }
+// }
 
-let u1 = new User("Ujjwal", 26);
-u1.name; //calling getter function
-u1.name = "Ishu"; //calling setter function
+// let u1 = new User("Ujjwal", 26);
+// u1.name; //calling getter function
+// u1.name = "Ishu"; //calling setter function
+
+//STATIC MEMBERS:-
+//if i make a variable static I can access the vairable using class name without creating the instance of a class
+// class User {
+//   static firstName = "Ujjwal";
+
+//   static getRandomNumber() {
+//     return Math.random();
+//   }
+// }
+
+// User.firstName;
+// User.getRandomNumber();
+
+// let u1 = new User(); //static variables wont show in instance.
+
+//ABSTRACT CLASSES:-
